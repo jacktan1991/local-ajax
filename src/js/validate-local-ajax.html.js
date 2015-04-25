@@ -6,6 +6,7 @@ var prehtml = template('person_data',samplePson);
 $("#data").html(prehtml);
 
 $(document).ready(function(){
+  titleChange();
   $(document).delegate("#modify", "click", "local-model/person.json", jsonGetFn(show));
 });
 
