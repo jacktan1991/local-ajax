@@ -1,7 +1,7 @@
 /**
  * Created by Jack on 2015-04-25.
  */
-var samplePson;
+var samplePson = {};
 var prehtml = template('person_data',samplePson);
 $("#data").html(prehtml);
 
@@ -10,6 +10,6 @@ $(document).ready(function(){
 });
 
 function show(jsondata){
-  var prehtml = template('person_data',jsondata);
+  var prehtml = template("person_data",jsondata);
   $("#data").html(prehtml);
 }
