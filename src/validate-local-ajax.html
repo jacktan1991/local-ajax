@@ -13,14 +13,15 @@
   <body>
   <div id="data">
     <script id="person_data" type="text/html">
-    {{each persons as person index}}
-      <div id="person_{{index}}">
-        <p>姓名：<span class="name">{{person.name}}</span></p>
-        <p>性别：<span class="sex">{{person.sex}}</span></p>
-        <p>年龄：<span class="age">{{person.age}}</span></p>
-      </div>
-    {{/each}}
+      {{each persons as person index}}
+      <ul id="person_{{index}}">
+        <li>姓名：<span class="name">{{person.name}}</span></li>
+        <li>性别：<span class="sex">{{person.sex}}</span></li>
+        <li>年龄：<span class="age">{{person.age}}</span></li>
+      </ul>
+      {{/each}}
     </script>
+
   </div>
   <button id="modify">更新</button>
   </body>
