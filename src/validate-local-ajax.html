@@ -7,34 +7,42 @@
     <link href="css/common.css" rel="stylesheet">
     <script src="js/jquery-2.1.1.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/art-template-3.0.js"></script>
   </head>
 
   <body>
   <div id="data">
-    <p>姓名：<span class="name">jack</span></p>
-    <p>性别：<span class="sex">male</span></p>
-    <p>年龄：<span class="age">24</span></p>
+    <script id="person_data" type="text/html">
+    {{each persons as person index}}
+      <div id="person_{{index}}">
+        <p>姓名：<span class="name">{{person.name}}</span></p>
+        <p>性别：<span class="sex">{{person.sex}}</span></p>
+        <p>年龄：<span class="age">{{person.age}}</span></p>
+      </div>
+    {{/each}}
+    </script>
   </div>
   <button id="modify">更新</button>
   </body>
 
   <script>
-    var str = "str";
+    var samplePson = {
+      persons :[
+        {name: "jack",
+          sex: "male",
+          age: 24}
+      ]
+    };
+    var prehtml = template('person_data',samplePson);
+    $("#data").html(prehtml);
+
     $(document).ready(function(){
       $(document).delegate("#modify", "click", "local-model/person.json", jsonGetFn(show));
     });
 
     function show(jsondata){
-
-      var view_base_sel = "#data span";
-      for (var i in jsondata.persons) {
-        var person = jsondata.persons[i];
-        for (var prop in person) {
-          $(view_base_sel + "." + prop).text(person[prop]);
-        }
-
-
-      }
+      var prehtml = template('person_data',jsondata);
+      $("#data").html(prehtml);
     }
 
   </script>
