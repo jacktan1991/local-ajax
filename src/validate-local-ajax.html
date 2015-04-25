@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head lang="zh-CN">
+    <meta charset="UTF-8">
+
+    <title>blank</title>
+    <link href="css/common.css" rel="stylesheet">
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/common.js"></script>
+  </head>
+
+  <body>
+  <div id="data">
+    <p>姓名：<span class="name">jack</span></p>
+    <p>性别：<span class="sex">male</span></p>
+    <p>年龄：<span class="age">24</span></p>
+  </div>
+  <button id="modify">更新</button>
+  </body>
+
+  <script>
+    var str = "str";
+    $(document).ready(function(){
+      $(document).delegate("#modify", "click", "local-model/person.json", jsonGetFn(show));
+    });
+
+    function show(jsondata){
+
+      var view_base_sel = "#data span";
+      for (var i in jsondata.persons) {
+        var person = jsondata.persons[i];
+        for (var prop in person) {
+          $(view_base_sel + "." + prop).text(person[prop]);
+        }
+
+
+      }
+    }
+
+  </script>
+</html>
