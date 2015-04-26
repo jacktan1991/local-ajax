@@ -21,7 +21,7 @@
     </ul>
     <script id="person_data" type="text/html">
       {{each persons as person index}}
-      <ul id="person_{{index}}" class="person-cell rgba{{index}}">
+      <ul id="{{person.name}}" class="person-cell rgba{{index}}">
         <li class="name">{{person.name}}</li>
         <li>{{person.sex}}</li>
         <li>{{person.age}}</li>

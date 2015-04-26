@@ -5,14 +5,13 @@ ul.person-cell {
 }
 ul.person-cell li {
   list-style: none;
-  font-family: "微软雅黑",Helvetica,sans-serif;
   font-weight: 700;
-  font-size: x-large;
-  color: white;
+  font-size: 200%;
+  color: #ffffff;
   padding: 1%;
   text-align: center;
 }
 
 ul.person-cell li.name {
-  font-size: 1000%;
+  font-size: 700%;
 }
