@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .rgba_ {
   background-color: rgba(252, 210, 11, 0.67);
 }

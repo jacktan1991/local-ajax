@@ -15,16 +15,16 @@
   <body>
   <div id="data">
     <ul id="person_" class="person-cell rgba_">
-      <li><span class="name">{{name}}</span></li>
-      <li><span class="sex">{{sex}}</span></li>
-      <li><span class="age">{{age}}</span></li>
+      <li class="name">{{name}}</li>
+      <li>{{sex}}</li>
+      <li>{{age}}</li>
     </ul>
     <script id="person_data" type="text/html">
       {{each persons as person index}}
       <ul id="person_{{index}}" class="person-cell rgba{{index}}">
-        <li><span class="name">{{person.name}}</span></li>
-        <li><span class="sex">{{person.sex}}</span></li>
-        <li><span class="age">{{person.age}}</span></li>
+        <li class="name">{{person.name}}</li>
+        <li>{{person.sex}}</li>
+        <li>{{person.age}}</li>
       </ul>
       {{/each}}
     </script>

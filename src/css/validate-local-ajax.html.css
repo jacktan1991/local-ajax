@@ -1,9 +1,7 @@
 ul.person-cell {
-  display: inline-block;
-  margin: 16px 30px;
-  padding: 2%;
-  height: 154px;
-  width: 195px;
+  margin: 0;
+  padding: 10%;
+  height: 100%;
 }
 ul.person-cell li {
   list-style: none;
@@ -11,7 +9,10 @@ ul.person-cell li {
   font-weight: 700;
   font-size: x-large;
   color: white;
-  margin: 2%;
-  padding: 3%;
+  padding: 1%;
   text-align: center;
+}
+
+ul.person-cell li.name {
+  font-size: 1000%;
 }
