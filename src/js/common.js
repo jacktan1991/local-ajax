@@ -2,9 +2,9 @@
  * Created by Jack on 2015-04-25.
  */
 
-var jsonGetFn = function(handler) {
-  return function(event) {
-    jQuery.getJSON(event.data,handler);
+var jsonGetFn = function(get_url, handler) {
+  return function() {
+    jQuery.getJSON(get_url,handler);
   };
 }
 
