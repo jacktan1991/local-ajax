@@ -5,6 +5,7 @@
 
     <title>blank</title>
     <link href="css/common.css" rel="stylesheet">
+    <link href="css/validate-local-ajax.html.css" rel="stylesheet">
     <script src="js/jquery-2.1.1.js"></script>
     <script src="js/art-template-3.0.js"></script>
     <script src="js/common.js"></script>
@@ -13,12 +14,17 @@
 
   <body>
   <div id="data">
+    <ul id="person_" class="person-cell rgba_">
+      <li><span class="name">{{name}}</span></li>
+      <li><span class="sex">{{sex}}</span></li>
+      <li><span class="age">{{age}}</span></li>
+    </ul>
     <script id="person_data" type="text/html">
       {{each persons as person index}}
-      <ul id="person_{{index}}">
-        <li>姓名：<span class="name">{{person.name}}</span></li>
-        <li>性别：<span class="sex">{{person.sex}}</span></li>
-        <li>年龄：<span class="age">{{person.age}}</span></li>
+      <ul id="person_{{index}}" class="person-cell rgba{{index}}">
+        <li><span class="name">{{person.name}}</span></li>
+        <li><span class="sex">{{person.sex}}</span></li>
+        <li><span class="age">{{person.age}}</span></li>
       </ul>
       {{/each}}
     </script>

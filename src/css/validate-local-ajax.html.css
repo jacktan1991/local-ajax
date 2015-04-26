@@ -1,0 +1,17 @@
+ul.person-cell {
+  display: inline-block;
+  margin: 16px 30px;
+  padding: 2%;
+  height: 154px;
+  width: 195px;
+}
+ul.person-cell li {
+  list-style: none;
+  font-family: "微软雅黑",Helvetica,sans-serif;
+  font-weight: 700;
+  font-size: x-large;
+  color: white;
+  margin: 2%;
+  padding: 3%;
+  text-align: center;
+}

@@ -1,0 +1,20 @@
+.rgba_ {
+  background-color: rgba(252, 210, 11, 0.67);
+}
+.rgba_:hover {
+  background-color: rgb(252, 210, 11);
+}
+
+.rgba0 {
+  background-color: rgba(118, 194, 175, 0.76);
+}
+.rgba0:hover {
+  background-color: rgb(118, 194, 175);
+}
+
+.rgba1 {
+  background-color: rgba(2, 103, 130, 0.50);
+}
+.rgba1:hover {
+  background-color: rgba(2, 103, 130, 0.8);
+}
