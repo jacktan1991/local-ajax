@@ -1,0 +1,15 @@
+{
+  "persons": [
+    {
+      "name": "Amy",
+      "sex": "femal",
+      "age": "28"
+    },
+    {
+      "name": "Gary",
+      "sex": "gay",
+      "age": "30",
+      "country": "American"
+    }
+  ]
+}
